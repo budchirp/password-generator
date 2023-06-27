@@ -8,6 +8,7 @@ import sys
 import os
 
 if os.name == "posix":
+
     class colors:
         white = "\033[1;37m"
         green = "\033[32m"
@@ -17,6 +18,7 @@ if os.name == "posix":
         endc = "\033[0m"
 
 else:
+
     class colors:
         white = ""
         green = ""
@@ -53,8 +55,8 @@ class PasswordGenerator:
 
     def select_length(self):
         text = self.use_lang(
-            en = f"{colors.green}Enter password length (default: 8): {colors.gray}",
-            tr = f"{colors.green}Şifre uzunluğunu girin (varsayılan: 8): {colors.gray}",
+            en=f"{colors.green}Enter password length (default: 8): {colors.gray}",
+            tr=f"{colors.green}Şifre uzunluğunu girin (varsayılan: 8): {colors.gray}",
         )
         length = input(text)
 
